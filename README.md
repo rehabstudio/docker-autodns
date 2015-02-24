@@ -1,5 +1,7 @@
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## autodns
+
 docker-autodns sets up a container running dnsmasq and docker-gen. The
 container uses docker-gen to reconfigure dnsmasq as other containers are
 started and stopped. Configured correctly, this container will allow other

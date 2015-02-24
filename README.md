@@ -69,7 +69,7 @@ $ ping mycontainer
 ```
 
 
-### Building autoproxy locally
+### Building autodns locally
 
 If you're planning to customise autodns, whether to submit a patch or just to
 customise a private build, the easiest way to do so is to clone this repo

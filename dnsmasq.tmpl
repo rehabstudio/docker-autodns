@@ -3,7 +3,10 @@ domain-needed
 bogus-priv
 resolv-file=/etc/resolv.conf
 {{ range $key, $container := . }}
-{{ with $address := index $container.Addresses 0 }}
-host-record={{$container.Name}},{{ $address.IP }}
-{{ end }}
+	{{ $addrLen := len $container.Addresses }}
+	{{ if ge $addrLen 1 }}
+		{{ with $address := index $container.Addresses 0 }}
+			host-record={{$container.Name}},{{ $address.IP }}
+		{{ end }}
+	{{ end }}
 {{ end }}
